@@ -17,5 +17,8 @@ docker pull kong
 Write-Output "`nPulling mongo-express..."
 docker pull mongo-express
 
+Write-Output "`nPulling openapi-generator..."
+docker pull openapitools/openapi-generator-cli:latest-release
+
 Write-Output "`nPruning images..."
 docker image prune -f
