@@ -1,5 +1,6 @@
 
 $name = 'nextcloud'
+Write-Output "`n"
 Write-Output "Stopping $name container."
 docker container stop $name
 Write-Output "Removing $name container."
@@ -8,6 +9,7 @@ Write-Output "Running new $name container"
 docker run --detach --name $name --publish 8180:80 --volume nextcloud:/var/www/html $name
 
 $name = 'redis'
+Write-Output "`n"
 Write-Output "Stopping $name container."
 docker container stop $name
 Write-Output "Removing $name container."
@@ -16,6 +18,7 @@ Write-Output "Running new $name container"
 docker run --detach --name $name $name
 
 $name = 'openapi-generator-online'
+Write-Output "`n"
 Write-Output "Stopping $name container."
 docker container stop $name
 Write-Output "Removing $name container."
